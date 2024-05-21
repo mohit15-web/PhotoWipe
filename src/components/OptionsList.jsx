@@ -1,5 +1,5 @@
 import { Home } from 'lucide-react';
-import { FaExchangeAlt, FaTrashAlt, FaSearch, FaCog, FaLifeRing } from 'react-icons/fa';
+import { FaExchangeAlt, FaTrashAlt, FaSearch} from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 function OptionsList() {

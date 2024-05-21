@@ -1,7 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import { useState } from "react";
 import { Loader } from "../Loader/Loader";
-import OptionsList from "./OptionsList";
 
 function Download() {
   const [text, setText] = useState("");
