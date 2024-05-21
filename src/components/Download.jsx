@@ -1,7 +1,12 @@
 import { ArrowDown } from "lucide-react";
 import { useState } from "react";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Loader } from "../Loader/Loader";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 function Download() {
   const [text, setText] = useState("");
   const [data, setData] = useState([]);
@@ -39,11 +44,23 @@ function Download() {
     a.click();
     document.body.removeChild(a);
     window.URL.revokeObjectURL(blobUrl);
+    toast.success("Downloaded Successfully", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
   };
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <h1 className="text-3xl font-semibold py-10">Bulk Image Downloader</h1>
+      <h1 className="text-3xl font-semibold py-10"
+          data-aos="fade-right"
+      >Bulk Image Downloader</h1>
       <div className="flex ">
         <form
           className="relative form"
@@ -114,6 +131,7 @@ function Download() {
             <div
               key={item.id}
               className="rounded overflow-hidden shadow-lg p-4 bg-white my-4 relative duration-200 hover:scale-105"
+              data-aos="flip-right"
             >
               {item.cover_photo && (
                 <img

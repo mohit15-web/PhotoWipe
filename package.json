@@ -10,13 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "axios": "^1.6.8",
+    "browser-image-compression": "^2.0.2",
     "file-saver": "^2.0.5",
     "form-data": "^4.0.0",
     "lucide-react": "^0.378.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1",
+    "react-image-webp": "^0.8.0",
     "react-router-dom": "^6.23.1",
     "react-toastify": "^10.0.5"
   },

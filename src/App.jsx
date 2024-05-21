@@ -5,9 +5,11 @@ import Convert from './components/Convert'
 import Download from './components/Download'
 import RemoveBg from './components/RemoveBg'
 import AppPage from './components/AppPage'
+import {ToastContainer} from 'react-toastify'
 function App() {
   return (
     <div>      
+      <ToastContainer/>
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>

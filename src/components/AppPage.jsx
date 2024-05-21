@@ -3,6 +3,10 @@ import image from '../assets/download.png'
 import { useNavigate } from 'react-router-dom'; 
 import { memo } from 'react';
 import OptionsList from './OptionsList';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 function AppPage() {
     const navigate = useNavigate()
     const images = [
@@ -18,10 +22,14 @@ function AppPage() {
             <img src="https://badass-app.vercel.app/static/media/hero-img-2.aecae7980905c700e4ca.png" alt=""
             className="w-[600px] border mt-12 bg-blue-300 rounded-xl"
             />
-            <h1 className="text-4xl font-semibold pt-6">Remove Image Background</h1>
+            <h1 className="text-4xl font-semibold pt-6"
+       data-aos="fade-right"
+            
+            >Remove Image Background</h1>
             <p className="py-6 text-lg text-gray-500">Get a transparent background for any image</p>
 
             <button className='removeBgButton'
+            data-aos="zoom-in-left"
             onClick={() => navigate("/removeBg")}
             >Upload Image</button>
             <p className="py-6 text-lg text-gray-500">No image? try one of these</p>
@@ -38,10 +46,14 @@ function AppPage() {
             <img src="https://badass-app.vercel.app/static/media/chain.e33754ea5500ca9abefd.png" alt=""
             className="w-[500px] border mt-12 bg-blue-300 rounded-xl"
             />
-            <h1 className="text-4xl font-semibold pt-6">Convert Your Images | Files</h1>
+            <h1 className="text-4xl font-semibold pt-6"
+       data-aos="fade-right"
+            
+            >Convert Your Images | Files</h1>
             <p className="py-6 text-lg text-gray-500">With Photowipe, you can convert your files to any format</p>
 
             <button className='removeBgButton'
+            data-aos="zoom-in-left"
             onClick={() => navigate("/convert")}
             >Choose Files</button>
         </div>
@@ -50,12 +62,17 @@ function AppPage() {
             <img src={image} alt=""
             className="w-[4 00px] mt-12 rounded-xl"
             />
-            <h1 className="text-4xl font-semibold pt-6">Download Multiple Images At Once</h1>
+            <h1 className="text-4xl font-semibold pt-6"
+       data-aos="fade-right"
+            
+            >Download Multiple Images At Once</h1>
             <p className="py-6 text-lg text-gray-500">Ever thought of downloading multiple images at once?</p>
 
             <button
             onClick={() => navigate("/download")}
             className='removeBgButton'
+            data-aos="zoom-in-left"
+
             >Download Images</button>
         </div>
         </div>

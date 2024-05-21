@@ -1,7 +1,10 @@
 import { Home } from 'lucide-react';
 import { FaExchangeAlt, FaTrashAlt, FaSearch} from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 function OptionsList() {
   const navigate = useNavigate()
   const options = [
@@ -15,7 +18,8 @@ function OptionsList() {
   }
 
   return (
-    <div className='flex w-[100%] gap-60'>
+    <div className='flex w-[100%] gap-60'
+    >
       {options.map((option, index) => (
         <div key={index} className='flex justify-center items-center flex-col gap- hover:text-[#48CAE4] cursor-pointer'
         onClick={() => handleClick(option.href)}

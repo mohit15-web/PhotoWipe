@@ -3,7 +3,11 @@ import axios from "axios";
 import { saveAs } from "file-saver";
 import OptionsList from "./OptionsList";
 import { Loader } from "../Loader/Loader"; // Ensure this path is correct
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { toast } from "react-toastify";
+// ..
+AOS.init();
 function RemoveBg() {
   const [inputImage, setInputImage] = useState(null);
   const [outputImage, setOutputImage] = useState(null);
@@ -46,6 +50,16 @@ function RemoveBg() {
       console.error("Request failed:", error);
     } finally {
       setIsLoading(false); // Stop loading
+      toast.success("Background Removed ", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     }
   };
 
@@ -54,6 +68,16 @@ function RemoveBg() {
       const response = await fetch(url);
       const blob = await response.blob();
       saveAs(blob, description || "downloaded_image.jpg"); // Set a default filename if description is not available
+      toast.success(" Downloaded Successfully ", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     } catch (error) {
       console.error("Error downloading image:", error);
     }
@@ -62,13 +86,17 @@ function RemoveBg() {
   return (
     <div className="relative flex flex-col items-center justify-center w-[100%] h-[90vh]">
       <div className="absolute top-0 flex flex-col items-center justify-center">
-        <h1 className="text-3xl font-semibold pt-5">Remove Background</h1>
-        <p className="text-xl my-4 text-gray-500">
+        <h1 className="text-3xl font-semibold pt-5"
+        data-aos="fade-right"
+        >Remove Background</h1>
+        <p className="text-xl my-4 text-gray-500"
+        data-aos="fade-in"
+        >
           Remove the background of any image
         </p>
       </div>
       
-      <div className="flex absolute top-32">
+      <div className="flex justify-center items-center absolute top-32">
         <div className="bg-[#fff] w-[200px] p-2 rounded-3xl">
           <label className="text-center ml-12 font-medium cursor-pointer">
             <input
@@ -109,7 +137,8 @@ function RemoveBg() {
           </div>
         ) : null}
       </div>
-      <div className="absolute bottom-0">
+      <div className="absolute bottom-0"
+    >
         <OptionsList />
       </div>
     </div>
