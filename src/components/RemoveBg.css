@@ -1,0 +1,39 @@
+.removeBgButton {
+    padding: 15px 25px;
+    width: 400px;
+    border: unset;
+    border-radius: 50px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e85e;
+    position: relative;
+    font-weight: 600;
+    font-size: 17px;
+    /* -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27); */
+    /* box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27); */
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   .removeBgButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 50px;
+    background-color: #212121;
+    z-index: -1;
+    /* -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27); */
+    /* box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27); */
+    transition: all 250ms
+   }
+   
+   .removeBgButton:hover {
+    color: #e8e8e8;
+   }
+   
+   .removeBgButton:hover::before {
+    width: 100%;
+   }

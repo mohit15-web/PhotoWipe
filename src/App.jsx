@@ -3,7 +3,8 @@ import Navbar from './components/Navbar'
 import Home from "./components/Home"
 import Convert from './components/Convert'
 import Download from './components/Download'
-import Footer from './components/Footer'
+import RemoveBg from './components/RemoveBg'
+import AppPage from './components/AppPage'
 function App() {
   return (
     <div>      
@@ -12,6 +13,8 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/convert" element={<Convert/>}/>
         <Route path="/download" element={<Download/>}/>
+        <Route path="/removebg" element={<RemoveBg/>}/>
+        <Route path="/AppPage" element={<AppPage/>}/>
       </Routes>
       
     </div>

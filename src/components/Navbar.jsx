@@ -1,13 +1,9 @@
 
 import React from 'react'
 import { Menu, X } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const menuItems = [
-  {
-    name: 'Home',
-    href: '/',
-  },
   {
     name: 'Convert',
     href: '/convert',
@@ -16,9 +12,14 @@ const menuItems = [
     name: 'Download',
     href: '/download',
   },
+  {
+    name: 'RemoveBg',
+    href: '/removebg',
+  },
 ]
 
 function Navbar() {
+  const navigate = useNavigate()
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
   const toggleMenu = () => {
@@ -31,7 +32,9 @@ function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8 ">
         <div className="inline-flex items-center space-x-2">
         
-          <span className="font-semibold text-2xl tracking-wider">PhotoWipe</span>
+          <span className="font-semibold text-2xl tracking-wider" 
+          onClick={() => navigate("/") }
+          >PhotoWipe</span>
         </div>
         <div className="hidden grow items-start lg:flex">
           <ul className="ml-12 inline-flex space-x-8">

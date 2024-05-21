@@ -1,6 +1,7 @@
 import { ArrowDown } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Loader } from "../Loader/Loader";
+import OptionsList from "./OptionsList";
 
 function Download() {
   const [text, setText] = useState("");
@@ -150,12 +151,16 @@ function Download() {
               <div className="px-6 py-4">
                 {item.preview_photos &&
                   item.preview_photos.map((photo, index) => (
+                    <a href={photo.urls.thumb}
+                    key={index}
+                    target="_blank"
+                    >
                     <img
-                      key={index}
                       className="inline-block h-12 w-12 rounded-full mr-2"
                       src={photo.urls.thumb}
                       alt={photo.id}
                     />
+                    </a>
                   ))}
               </div>
               <div className="px-6 py-4">
@@ -172,6 +177,10 @@ function Download() {
           ))
         )}
       </div>
+
+      {/* <div className="absolute bottom-0">
+      <OptionsList />
+      </div> */}
     </div>
   );
 }
