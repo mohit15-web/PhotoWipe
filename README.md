@@ -1,8 +1,37 @@
-# React + Vite
+# Image Background Removal App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is an Image Background Removal App built with React and TailwindCSS. It allows users to effortlessly remove backgrounds from images using an API integration and provides download options for edited images.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Remove background from images using API integration.
+- Upload images and preview the background removal effect.
+- Download the edited images.
+- Responsive and user-friendly interface.
+
+## Technologies Used
+
+- React
+- TailwindCSS
+- JavaScript
+- [Background Removal API](https://www.remove.bg/api)
+
+## Demo
+
+A live demo of the application can be found [here](https://your-live-demo-link.com).
+
+## Getting Started
+
+To get a local copy of the project up and running, follow these simple steps.
+
+### Prerequisites
+
+- Node.js
+- npm (Node Package Manager)
+
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/your-username/image-background-remove-app.git
