@@ -1,35 +1,34 @@
-# Image Background Removal App
+# 🖼️ Image Background Removal App
 
 This project is an Image Background Removal App built with React and TailwindCSS. It allows users to effortlessly remove backgrounds from images using an API integration and provides download options for edited images.
 
-## Features
+## ✨ Features
 
-- Remove background from images using API integration.
-- Upload images and preview the background removal effect.
-- Download the edited images.
-- Responsive and user-friendly interface.
+- 🎨 Remove background from images using API integration.
+- 📤 Upload images and preview the background removal effect.
+- 💾 Download the edited images.
+- 📱 Responsive and user-friendly interface.
 
-## Technologies Used
+## 🛠️ Technologies Used
 
-- React
-- TailwindCSS
-- JavaScript
-- [Background Removal API](https://www.remove.bg/api)
+- ⚛️ React
+- 🎨 TailwindCSS
+- 📜 JavaScript
 
-## Demo
+## 🌐 Demo
 
-A live demo of the application can be found [here](https://your-live-demo-link.com).
+A live demo of the application can be found [here](https://photo-wipe.vercel.app/).
 
-## Getting Started
+## 🚀 Getting Started
 
 To get a local copy of the project up and running, follow these simple steps.
 
-### Prerequisites
+### 📋 Prerequisites
 
-- Node.js
-- npm (Node Package Manager)
+- 🖥️ Node.js
+- 📦 npm (Node Package Manager)
 
-### Installation
+### 📦 Installation
 
 1. Clone the repository:
 
